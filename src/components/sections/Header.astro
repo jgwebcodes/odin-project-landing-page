@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import heroImg from "../../assets/hero.jpg";
+---
+
+<header>
+	<div class="wrapper">
+		<nav>
+			<a class="logo" href="/">Web Crafters</a>
+			<ul>
+				<li><a href="/">About</a></li>
+				<li><a href="/">Services</a></li>
+				<li><a href="/">Contac Us</a></li>
+			</ul>
+		</nav>
+
+		<div class="hero">
+			<div class="hero-content">
+				<h1>Custom Web Design and Development</h1>
+				<p>Custom web design, development and maintenance services to keep your site running smoothly.</p>
+				<button>Our Services</button>
+			</div>
+			<div class="hero-img-wrapper">
+				<Image class="hero-img" src={heroImg} alt="Game controller" width={720} height={320} />
+			</div>
+		</div>
+	</div>
+</header>
+
+<style>
+	header {
+		width: 100%;
+		height: 100dvh;
+		background-color: var(--bg-clr-dark);
+		color: var(--text-clr-light);
+	}
+
+	.wrapper {
+		margin: auto 8rem;
+	}
+
+	nav {
+		width: 100%;
+		padding: 2rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		font-size: 1.125rem;
+		color: var(--bg-clr-gray);
+	}
+
+	.hero {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.7rem;
+		margin-top: 4rem;
+	}
+
+	.hero-content {
+		flex: 1;
+	}
+
+	.hero h1 {
+		font-size: 2.8rem;
+		font-weight: 600;
+		letter-spacing: 1.1px;
+		margin-bottom: 0.5rem;
+	}
+
+	.hero p {
+		font-size: 1.125rem;
+		letter-spacing: 0.3px;
+		line-height: 1.4;
+		color: var(--bg-clr-gray);
+		margin-bottom: 1.5rem;
+		max-width: 440px;
+		text-wrap: pretty;
+	}
+
+	button {
+		font-size: 1.125rem;
+		padding: 0.8rem 1.6rem;
+		border-radius: 6px;
+		background-color: var(--accent-primary);
+		color: var(--text-clr-light);
+		border: none;
+		outline: none;
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.hero-img-wrapper {
+		flex: 1;
+	}
+
+	.hero-img {
+		border-radius: 0.5rem;
+		/* box-shadow: 8px 8px 16px 8px rgba(11, 11, 11, 0.75); */
+		box-shadow: 8px 8px 16px 8px rgba(1, 16, 36, 0.75);
+		/* -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+		/* -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+	}
+</style>
